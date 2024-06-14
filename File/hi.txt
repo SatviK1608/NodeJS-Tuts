@@ -1,0 +1,1 @@
+sirf writeFileSync ko import kra hai

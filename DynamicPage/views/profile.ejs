@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <!-- To include common files we use %- which tells express that we are loading html content not js content -->
+    <%- include('common/header') %>
+
+    <h1>Welcome <%= user.name%> to Profile Page</h1>
+    <h2>Your email id is <%= user.email%></h2>
+
+    <!-- using for-loop to iterate -->
+    <ul>
+      <% user.skills.forEach((item)=>{ %>
+
+      <li><%= item %></li>
+
+      <% }) %>
+    </ul>
+  </body>
+</html>
